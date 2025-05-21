@@ -1,0 +1,39 @@
+body {
+  background: #272727;
+}
+
+.block-inner {
+  
+  height: 50%;
+}
+
+.block-inner2 {
+  background: #807b7b;
+  height: 50%;
+  position: relative;
+}
+.block-inner3 {
+  
+  height: 50%;
+}
+
+
+.block__square {
+  background: #d6d6d6;
+  height: 100px;
+  width: calc(50% - 50px);
+  border-radius: 30px;
+  position: fixed;
+  left:calc(100% - 50%);
+  bottom: 100px;
+}
+
+.block__circule {
+  background: #ff4848;
+  height: 100px;
+  width: 100px;
+  border-radius: 100px;
+  position: fixed;
+  left:calc(100% - 45%);
+  bottom: 150px;
+}

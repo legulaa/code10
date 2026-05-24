@@ -1,0 +1,38 @@
+.opinion {
+  background: #F8F8F8;
+}
+
+
+.opinion__wraper {
+  display: flex;
+  background-image: url(../img/opinion/woman.png);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  margin-top: 150px;
+}
+
+.opinion__info {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  color: #000;
+  max-width: 640px;
+  margin-top: 150px;
+}
+
+.opinion__title {
+  font-family: var(--second-family);
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 50px;
+  margin-bottom: 40px;
+}
+
+.opinion__about {
+  max-width: 670px;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 140%;
+  margin-bottom: 160px;
+}

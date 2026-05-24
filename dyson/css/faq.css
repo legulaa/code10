@@ -1,0 +1,43 @@
+.faq {
+  background: #F8F8F8;
+}
+
+.faq__inner {
+  padding-bottom: 150px;
+}
+
+.faq__wrapper {}
+
+.faq__list {
+  display: grid;
+  gap: 20px;
+
+}
+
+.faq__item {
+  border-bottom: 1px solid #ababab;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+  padding-bottom: 20px;
+
+
+}
+
+.faq__item:first-child {
+  border-top: 1px solid #ababab;
+  padding-top: 20px;
+}
+
+.faq__info {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.faq__plus {
+  width: 36px;
+}

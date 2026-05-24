@@ -1,0 +1,90 @@
+.cards {}
+
+.cards__inner {
+  margin-top: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards__wrapper {}
+
+.cards__list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  gap: 20px;
+}
+
+.cards__item {
+  display: flex;
+  box-shadow: 0px 4px 41px 0px rgba(0, 0, 0, 0.05), 0px 4px 41px 0px rgba(0, 0, 0, 0.05);
+  border-radius: 3px;
+}
+
+
+.cards__link {
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+}
+.cards__link:hover path{
+  transition: var(--transition);
+}
+.cards__link:hover,
+.cards__link:hover path {
+  fill: white;
+  border-radius: 0px 0px 10px 10px;
+  background: #000;
+  color: white;
+}
+
+.cards__link-img {
+  display: block;
+}
+
+.cards__link-img img {
+  width: 100%;
+}
+
+.cards__link-info-title {
+  font-family: var(--second-family);
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 36px;
+
+}
+
+.cards__link-info {
+  display: flex;
+  justify-content: end;
+  align-items: start;
+  flex-direction: column;
+  gap: 5px;
+  padding-top: 7%;
+  padding-left: 10%;
+  padding-bottom: 7%;
+
+}
+
+.cards__link-info path {
+  transition: var(--transition);
+}
+
+
+
+.cards__link-about {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+}
+
+.cards__link-about p {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 33px;
+}

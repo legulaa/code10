@@ -1,0 +1,107 @@
+.forms {
+  background: #f8f8f8;
+}
+
+
+.forms__inner {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 100px;
+  padding-bottom: 110px;
+}
+
+.forms__inner input[type="text"],
+.forms__inner input[type="tel"],
+.forms__inner input[type="email"] {
+  display: block;
+  width: 100%;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #999;
+  padding: 12px 0;
+  margin-bottom: 25px;
+  font-size: 14px;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.3s;
+
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 18px;
+  color: #ababab;
+}
+
+.forms__inner input:focus {
+  border-bottom-color: #000;
+
+}
+
+.contact-form {}
+
+.offers__title {}
+
+.input-group {}
+
+.btn-black {}
+
+.subscribe-form {}
+
+.checkbox-label {}
+
+.forms__inner button {
+  background-color: #0f0f0f;
+  color: #fff;
+  border-radius: 3px;
+  padding: 10px;
+  padding: 15px 40px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: opacity 0.3s;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 24px;
+  color: #fff;
+  transition: var(--transition);
+}
+
+.forms__inner button:hover {
+  opacity: 0.9;
+  background: var(--hover-color);
+  color: white;
+}
+
+.checkbox__info {
+  border: 1px solid #111;
+  border-radius: 3px;
+  width: 30px;
+  height: 30px;
+  appearance: none;
+  position: relative;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.checkbox__info::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url(../img/forms/check.svg) 50% 50% no-repeat;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-top: 30px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  color: #000;
+}
+
+.checkbox__info:checked::before {
+  opacity: 1;
+}

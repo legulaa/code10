@@ -1,0 +1,34 @@
+.news {
+}
+
+.news__inner {
+}
+
+.news__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+} 
+.news__text{
+    margin-bottom: 20px;
+}
+.news__info-button{
+    max-width: 118px; 
+}
+.news__item {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+.news__png img {
+    width: 100%;
+}
+.news__png{
+    margin-bottom: 30px;
+    max-width: 400px;
+}
+.reviews__box-before {
+}
+.news__info {
+}

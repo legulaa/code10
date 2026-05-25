@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'NAMU Pro';
+    src: url('../fonts/NAMU-Pro.woff2') format('woff2'),
+        url('../fonts/NAMU-Pro.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+

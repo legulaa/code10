@@ -33,14 +33,16 @@ function getTimeOfDay (num) {
 console.log(getTimeOfDay(18))
 
 function findFirstEven (start, end) {
-    let num1 = start;
-    let num2 = end;
-    for( let i = num1; i <= num2; i++) {
+    for( let i = start; i <= end; i++) {
         if(i % 2 === 0) {
             return i
-        } else {
-            return 'Нет четных чисел!'
         }
     }
+
+    if (start > end) {
+        return 'Некорректный диапозон'
+    }
+    return 'Нет четных чисел!'
 } 
+console.log(findFirstEven(12, 13))
 console.log(findFirstEven(1, 1))

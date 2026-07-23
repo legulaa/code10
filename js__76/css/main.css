@@ -118,11 +118,11 @@ body {
 	margin-bottom: 0;
 }
 
-.todo.completed {
+.todo.complete {
 	opacity: 0.7;
 }
 
-.todo.completed .todo-text {
+.todo.complete .todo-text {
 	text-decoration: line-through;
 }
 

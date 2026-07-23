@@ -48,22 +48,60 @@ const deleteTodoById = (todos, todoId) => {
 // Создаем функцию createTodoElement(text), которая будет создавать todo в виде разметки
 // Создаем функцию handleCreateTodo(todos, text), которая будет вызывать createTodo и createTodoElement
 
-const form = document.querySelector(".form");
-const input = document.querySelector(".input");
-const todosSel = document.querySelector(".todos");
+const formElement = document.querySelector(".form");
+const inputElement = document.querySelector(".input");
+const todosElement = document.querySelector(".todos");
 
-const createTodoElement = (text) => {
+const createTodoElement = (todo) => {
   const newItem = document.createElement("li");
   newItem.classList.add("todo");
-  newItem.textContent = text;
+  newItem.dataset.id = todo[todoKeys.id];
+
+  newItem.innerHTML = `
+  <div class="todo-text">${todo[todoKeys.text]}</div>
+  <div class="todo-actions">
+    <button class="button-complete button">&#10004;</button>
+    <button class="button-delete button">&#10006;</button>
+  </div>
+  `;
   return newItem;
 };
 
 const handleCreateTodo = (todos, text) => {
-  if (!text.trim()) {
-    return;
-  }
-
-  const todoElement = createTodoElement(text);
-  todos.append(todoElement);
+  const todo = createTodo(todos, text);
+  const todoElement = createTodoElement(todo);
+  todosElement.prepend(todoElement);
 };
+
+formElement.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const text = inputElement.value.trim();
+
+  if (!text) return;
+
+  handleCreateTodo(todos, text);
+  inputElement.value = "";
+});
+
+todosElement.addEventListener("click", (event) => {
+  const todo = event.target.closest(".todo");
+  if (!todo) return;
+
+  if (event.target.matches(".button-complete")) {
+    completeTodoById(todos, Number(todo.dataset.id));
+    todo.classList.toggle("complete");
+  }
+});
+
+
+todosElement.addEventListener("click", (event) => {
+  const todo = event.target.closest(".todo");
+  if (!todo) return;
+
+  if (event.target.matches(".button-delete")) {
+    deleteTodoById(todos, Number(todo.dataset.id));
+    todo.remove()
+  }
+});
+
